@@ -17,7 +17,7 @@ const UsersComponent = () => {
 
 
     const getPosts = (id: number) =>{
-        getPostsOfUserByUser(id).then(posts=> console.log(posts));
+        getPostsOfUserByUser(id).then(posts=> setPosts(posts));
     }
 return (
     <div>

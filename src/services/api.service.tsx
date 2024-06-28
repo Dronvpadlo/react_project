@@ -1,10 +1,11 @@
-const getAllUsers = ()=>{
-    return fetch('https://jsonplaceholder.typicode.com/users')
+const baseUrl = 'https://jsonplaceholder.typicode.com'
+const getAllUsers = async ()=>{
+    return await fetch(baseUrl+'/users')
         .then(value => value.json())
 
 }
-const getPostsOfUserByUser = (id:number)=>{
-    return fetch('https://jsonplaceholder.typicode.com/users/'+id+'/posts')
+const getPostsOfUserByUser = async (id:number)=>{
+    return await fetch(baseUrl + '/users/' + id + '/posts')
         .then(value => value.json())
 
 }

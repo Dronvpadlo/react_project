@@ -1,12 +1,25 @@
-import React, {FC} from 'react';
-import logo from './logo.svg';
+import React, {FC, useEffect, useState} from 'react';
 import './App.css';
+import './components/product-component/productComponent'
+import './components/products-component/productsComponent'
 
 const App: FC = () => {
-  return (
-    <div className="App">
+  const baseUrl = 'https://dummyjson.com'
 
-    </div>
+  const [products, setProducts] = useState([])
+
+    useEffect(()=>{
+        fetch(baseUrl + '/products')
+            .then(res => res.json())
+            .then(responce => {
+                setProducts(responce.products)
+                console.log(responce.products)
+    })
+      }, []);
+  return (
+    <>
+        {products}
+    </>
   );
 }
 

@@ -12,7 +12,6 @@ const ProductsComponent = () => {
             .then(res => res.json())
             .then(responce => {
                 setProductsList(responce.products)
-                console.log(responce.products)
             })
     }, []);
     return (

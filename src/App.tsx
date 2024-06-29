@@ -2,6 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import './App.css';
 import './components/product-component/productComponent'
 import './components/products-component/productsComponent'
+import './modules/IProducts'
 
 const App: FC = () => {
   const baseUrl = 'https://dummyjson.com'

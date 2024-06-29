@@ -1,0 +1,17 @@
+.productStyle{
+    margin-top: 35px;
+    background-color: #8da9f1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    border-radius: 5%;
+    padding: 30px;
+}
+.imageWidth{
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10%;
+    margin: 6px;
+}

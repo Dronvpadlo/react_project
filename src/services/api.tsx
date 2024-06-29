@@ -1,8 +1,10 @@
 
-const baseUrl = 'https://dummyjson.com'
 
-const products = fetch(baseUrl + '/products')
-    .then(res => res.json())
-    .then(console.log);
+const baseUrl: string = 'https://dummyjson.com'
 
-export default {products}
+const getProducts = () =>{
+    return fetch(baseUrl + '/products')
+        .then(res => res.json())
+
+}
+export {getProducts}

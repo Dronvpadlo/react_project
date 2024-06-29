@@ -1,9 +1,7 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import './App.css';
 import './components/products-component/productsComponent'
-import './modules/IProducts'
-import IProducts from "./modules/IProducts";
-import ProductComponent from "./components/product-component/productComponent";
+import './models/IProducts'
 import ProductsComponent from "./components/products-component/productsComponent";
 
 const App: FC = () => {

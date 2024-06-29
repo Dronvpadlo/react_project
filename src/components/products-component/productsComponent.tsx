@@ -1,21 +1,21 @@
 import React, {useEffect, useState} from 'react';
-import IProducts from "../../modules/IProducts";
+import IProducts from "../../models/IProducts";
 import ProductComponent from "../product-component/productComponent";
+import {getProducts} from "../../services/api";
+import styles from './products.module.css'
 
 const ProductsComponent = () => {
-    const baseUrl = 'https://dummyjson.com'
 
     const [productsList, setProductsList] = useState<IProducts[]>([])
 
     useEffect(()=>{
-        fetch(baseUrl + '/products')
-            .then(res => res.json())
-            .then(responce => {
-                setProductsList(responce.products)
-            })
+       getProducts().then((res) => {
+           console.log(res)
+            setProductsList(res.products)
+        })
     }, []);
     return (
-        <>
+        <div className={styles.productsBGC}>
             {
                 productsList.map((product) => <ProductComponent
                     key={product.id}
@@ -42,7 +42,7 @@ const ProductsComponent = () => {
                     warrantyInformation={product.warrantyInformation}
                     weight={product.weight}/>)
             }
-        </>
+        </div>
     );
 };
 

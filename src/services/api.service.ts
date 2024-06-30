@@ -1,7 +1,7 @@
 
-
+const baseURL = 'https://dummyjson.com'
 const getAllUsers = () =>{
-    return fetch('https://dummyjson.com/users')
+    return fetch(baseURL + '/users')
         .then(res => res.json())
 
 }

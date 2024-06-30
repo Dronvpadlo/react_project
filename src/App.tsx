@@ -3,11 +3,9 @@ import './App.css';
 
 const App: FC = () => {
 
-  fetch('https://jsonplaceholder.typicode.com/users/')
-      .then(value => value.json())
-      .then(res => {
-    console.log(res);
-  });
+    fetch('https://dummyjson.com/users')
+        .then(res => res.json())
+        .then(console.log);
   return (
     <>
 

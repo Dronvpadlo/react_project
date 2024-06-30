@@ -8,16 +8,15 @@ const UsersComponent = () => {
     useEffect(() => {
         getAllUsers().then((res) => {
             setUsersList(res.users);
-        });
+        })
     }, []);
 
     return (
         <div>
-            <ul>
                 {
                     usersList.map((user) => (<UserComponent key={user.id} user={user}></UserComponent>))
                 }
-            </ul>
+
         </div>
     );
 };

@@ -7,7 +7,7 @@ interface IProps{
 const UserComponent: FC<IProps> = ({user}) => {
     return (
         <div>
-
+            {user.id}: {user.lastName}
         </div>
     );
 };

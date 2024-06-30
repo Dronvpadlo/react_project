@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import UserComponent from "../user-component/userComponent";
+import {IUser} from "../../models/IUser";
 
 const UsersComponent = () => {
-    const [users, setUsers] = useState<any[]>([]);
+    const [usersList, setUsersList] = useState<IUser[]>([]);
     useEffect(() => {
         fetch('https://dummyjson.com/users')
             .then(res => res.json())
             .then(res =>{
-                setUsers(res.users)
+                setUsersList(res.users)
                 console.log(res.users)
             });
     }, []);
@@ -15,7 +16,9 @@ const UsersComponent = () => {
     return (
         <div>
             <ul>
-                users.map((user) => (<UserComponent key={user.id}id={user.id}/>))
+                {
+                    usersList.map((user) => (<UserComponent key={user.id} user={user}></UserComponent>))
+                }
             </ul>
         </div>
     );

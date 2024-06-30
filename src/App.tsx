@@ -1,15 +1,15 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './App.css';
+import UsersComponent from "./components/users-componet/usersComponent";
 
 const App: FC = () => {
 
-    fetch('https://dummyjson.com/users')
-        .then(res => res.json())
-        .then(console.log);
-  return (
-    <>
 
-    </>
+
+  return (
+    <div>
+        <UsersComponent></UsersComponent>
+    </div>
   );
 }
 

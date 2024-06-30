@@ -15,7 +15,7 @@ const UsersComponent = () => {
     return (
         <div>
             <ul>
-                users.map((user) => (<UserComponent user={user}/>))
+                users.map((user) => (<UserComponent key={user.id}id={user.id}/>))
             </ul>
         </div>
     );

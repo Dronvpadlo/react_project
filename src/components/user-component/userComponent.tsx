@@ -1,10 +1,12 @@
 import React, {FC} from 'react';
 import {IUser} from "../../models/IUser";
+import {getPostsOFUser} from "../../services/api.service";
 
 interface IProps{
     user: IUser
+        getPosts: (id: number) => void
 }
-const UserComponent: FC<IProps> = ({user}) => {
+const UserComponent: FC<IProps> = ({user, getPosts}) => {
     return (
         <div>
             <div>{user.firstName}</div>
@@ -57,6 +59,10 @@ const UserComponent: FC<IProps> = ({user}) => {
             <div>       {user.crypto.wallet}</div>
             <div>       {user.crypto.network}</div>
             <div>{user.role}</div>
+            <button onClick={()=>{
+                    getPosts(user.id)
+
+            }}>Posts</button>
                 <hr/>
         </div>
     );

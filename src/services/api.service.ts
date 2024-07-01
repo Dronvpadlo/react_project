@@ -1,14 +1,19 @@
+import axios from "axios";
 
-const baseURL = 'https://dummyjson.com'
-const getAllUsers = () =>{
-    return fetch(baseURL + '/users')
-        .then(res => res.json())
-
+let axiosInstance = axios.create({
+    baseURL: 'https://dummyjson.com',
+    headers:{
+        'Content-Type': "application/json",
+    }
+});
+const getAllUsers = async ()=>{
+    return await axiosInstance.get('/users').then((response) =>{
+        return response.data;
+    })
 }
-const getPostsOFUser = (id: number) =>{
-    return fetch(baseURL + '/posts/user/'+id)
-        .then(res => res.json())
-
+const getPostsOFUser = async (id: number)=> {
+    return await axiosInstance.get('/posts/user/' + id).then((response) => {
+        return response.data;
+    })
 }
-
 export {getAllUsers, getPostsOFUser}

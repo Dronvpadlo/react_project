@@ -1,0 +1,12 @@
+.section{
+    background-color: #fa8787;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

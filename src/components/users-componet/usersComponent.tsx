@@ -14,11 +14,10 @@ const UsersComponent = () => {
         })
     }, []);
 const getPosts = (id: number) =>{
-    getPostsOFUser(id).then(posts => setPosts(posts));
+    getPostsOFUser(id).then(posts => setPosts([...posts.posts]));
 }
     return (
         <div>
-            <hr/>
             <div>
                 {
                     usersList.map((user) => (<UserComponent
@@ -29,7 +28,6 @@ const getPosts = (id: number) =>{
                         />))
                 }
             </div>
-            <hr/>
             <div>
                 <PostsComponent posts={posts}/>
             </div>

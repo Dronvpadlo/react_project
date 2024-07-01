@@ -26,38 +26,45 @@ const UserComponent: FC<IProps> = ({user, getPosts}) => {
             <div>{user.eyeColor}</div>
             <div>{user.hair.color} {user.hair.type}</div>
             <div>{user.ip}</div>
-            <div>Adress: {user.address.address}</div>
-            <div>        {user.address.city}</div>
-            <div>        {user.address.state}</div>
-            <div>        {user.address.stateCode}</div>
-            <div>        {user.address.postalCode}</div>
-            <div>        {user.address.coordinates.lat}</div>
-            <div>        {user.address.coordinates.lng}</div>
-            <div>        {user.address.country}</div>
+            <div>
+                <div>Adress: {user.address.address}</div>
+                <div>{user.address.city}</div>
+                <div>{user.address.state}</div>
+                <div>{user.address.stateCode}</div>
+                <div>{user.address.postalCode}</div>
+                <div>{user.address.coordinates.lat}</div>
+                <div>{user.address.coordinates.lng}</div>
+                <div>{user.address.country}</div>
+            </div>
             <div>{user.macAddress}</div>
             <div>{user.university}</div>
-            <div>{user.bank.cardExpire}</div>
-            <div>{user.bank.cardNumber}</div>
-            <div>{user.bank.cardType}</div>
-            <div>{user.bank.currency}</div>
-            <div>{user.bank.iban}</div>
-            <div>       {user.company.department}</div>
-            <div>       {user.company.name}</div>
-            <div>       {user.company.title}</div>
-            <div>               {user.company.address.address}</div>
-            <div>               {user.company.address.city}</div>
-            <div>               {user.company.address.state}</div>
-            <div>               {user.company.address.stateCode}</div>
-            <div>               {user.company.address.postalCode}</div>
-            <div>               {user.company.address.coordinates.lat}</div>
-            <div>               {user.company.address.coordinates.lng}</div>
-            <div>               {user.company.address.country}</div>
+            <div>
+                <div>{user.bank.cardExpire}</div>
+                <div>{user.bank.cardNumber}</div>
+                <div>{user.bank.cardType}</div>
+                <div>{user.bank.currency}</div>
+                <div>{user.bank.iban}</div>
+            </div>
+            <div>
+                <div>{user.company.department}</div>
+                <div>{user.company.name}</div>
+                <div>{user.company.title}</div>
+                <div>{user.company.address.address}</div>
+                <div>{user.company.address.city}</div>
+                <div>{user.company.address.state}</div>
+                <div>{user.company.address.stateCode}</div>
+                <div>{user.company.address.postalCode}</div>
+                <div>{user.company.address.coordinates.lat}</div>
+                <div>{user.company.address.coordinates.lng}</div>
+                <div>{user.company.address.country}</div>
+            </div>
             <div>{user.ein}</div>
             <div>{user.ssn}</div>
-            <div>{user.userAgent}</div>
-            <div>       {user.crypto.coin}</div>
-            <div>       {user.crypto.wallet}</div>
-            <div>       {user.crypto.network}</div>
+            <div><div>{user.userAgent}</div>
+                <div>{user.crypto.coin}</div>
+                <div>{user.crypto.wallet}</div>
+                <div>{user.crypto.network}</div>
+            </div>
             <div>{user.role}</div>
             <button onClick={()=>{
                     getPosts(user.id)

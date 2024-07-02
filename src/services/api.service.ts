@@ -6,12 +6,12 @@ let axiosInstance = axios.create({
         'Content-Type': "application/json",
     }
 });
-const getAllUsers = async ()=>{
+const getAllUsers = async ():Promise<any> =>{
     return await axiosInstance.get('/users').then((response) =>{
         return response.data;
     })
 }
-const getPostsOFUser = async (id: number)=> {
+const getPostsOFUser = async (id: number):Promise<any> => {
     return await axiosInstance.get('/posts/user/' + id).then((response) => {
         return response.data;
     })

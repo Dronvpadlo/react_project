@@ -1,0 +1,18 @@
+.on{
+    background-color: #56ff59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.off{
+    background-color: #fd5656;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

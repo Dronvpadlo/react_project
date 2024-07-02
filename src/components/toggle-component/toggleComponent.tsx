@@ -6,7 +6,7 @@ const ToggleComponent = () =>{
     return (
         <div className={styles.flex}>
             <p>Current Status: {toggle ? <div className={styles.on}>On</div> : <div className={styles.off}>Off</div>}</p>
-            <button onClick={handleToggle}>Change</button>
+            <button className={styles.setButton} onClick={handleToggle}>Change</button>
         </div>
     );
 

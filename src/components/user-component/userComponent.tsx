@@ -17,7 +17,7 @@ const UserComponent: FC<IProps> = ({user, getPosts}) => {
             <div>Username: {user.username}</div>
             <div>Password: {user.password}</div>
             <div>Birthday: {user.birthDate}</div>
-            <img src={user.image} alt="User Image"/>
+            <img src={user.image} alt="UserImage"/>
             <div>Blood Group: {user.bloodGroup}</div>
             <div>Height: {user.height}</div>
             <div>Weight: {user.weight}</div>
@@ -25,7 +25,7 @@ const UserComponent: FC<IProps> = ({user, getPosts}) => {
             <div>Hair: {user.hair.color} {user.hair.type}</div>
             <div>IP: {user.ip}</div>
 
-            <button onClick={()=>{
+            <button className={styles.buttom} onClick={()=>{
                     getPosts(user.id)
 
             }}>Posts</button>

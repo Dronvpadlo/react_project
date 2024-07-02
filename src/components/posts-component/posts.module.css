@@ -1,0 +1,11 @@
+.answer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d341ff;
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+}

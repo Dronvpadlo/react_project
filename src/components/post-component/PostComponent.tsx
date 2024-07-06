@@ -24,10 +24,10 @@ class PostComponent extends Component<PropType> {
                     postsLoaded && (
                         <ul>
                             {posts.map(post => (
-                                <li key={post.id}>
-                                    <h3>{post.title}</h3>
-                                    <p>{post.body}</p>
-                                </li>
+                                <ul key={post.id}>
+                                    <li>{post.title}</li>
+                                    <li>{post.body}</li>
+                                </ul>
                             ))}
                         </ul>
                     )

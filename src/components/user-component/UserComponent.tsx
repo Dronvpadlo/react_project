@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { IUser } from "../../models/IUser";
 import PostComponent from "../post-component/PostComponent";
+import styles from './UserComponent.module.css'
 
 type PropType = {
     user: IUser,
@@ -44,7 +45,7 @@ class UserComponent extends Component<PropType, StateType> {
 
     render() {
         return (
-            <div>
+            <div className={styles.bgc}>
                 <div>Name: {this.props.user.lastName} {this.props.user.firstName}</div>
                 <div>Age: {this.props.user.age}</div>
                 <div>Gender: {this.props.user.gender}</div>

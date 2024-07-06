@@ -27,6 +27,7 @@ class UsersComponent extends Component<{}, StateType> {
                 {
                     this.state.users.map(user => (<UserComponent key={user.id} user={user}/>))
                 }
+
             </div>
         );
     }

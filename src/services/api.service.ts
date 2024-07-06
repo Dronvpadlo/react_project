@@ -1,6 +1,5 @@
 import axios from "axios";
 import {urls, baseUrl} from "../constants/urls";
-import {IUser} from "../models/IUser";
 
 let axiosInstance =  axios.create({
     baseURL: baseUrl,

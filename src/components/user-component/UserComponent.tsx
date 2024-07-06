@@ -1,12 +1,37 @@
-import React, {Component} from 'react';
-import {IUser} from "../../models/IUser";
+import React, { Component } from 'react';
+import axios from 'axios';
+import { IUser } from "../../models/IUser";
+import PostComponent from "../post-component/PostComponent";
 
-
-type PropType={
+type PropType = {
     user: IUser,
-
 }
-class UserComponent extends Component<PropType> {
+
+type StateType = {
+    posts: any[],
+    postsLoaded: boolean
+}
+
+class UserComponent extends Component<PropType, StateType> {
+    constructor(props: PropType) {
+        super(props);
+        this.state = {
+            posts: [],
+            postsLoaded: false
+        };
+    }
+
+    fetchUserPosts = () => {
+        axios.get(`https://dummyjson.com/users/${this.props.user.id}/posts`)
+            .then(response => {
+                this.setState({ posts: response.data.posts, postsLoaded: true });
+            })
+            .catch(error => {
+                console.error('Error fetching user posts:', error);
+                this.setState({ postsLoaded: true }); // навіть якщо сталася помилка, відмічаємо, що спроба завантаження була
+            });
+    }
+
     render() {
         return (
             <div>
@@ -17,7 +42,8 @@ class UserComponent extends Component<PropType> {
                 <div>Phone: {this.props.user.phone}</div>
                 <img src={this.props.user.image} alt="userImg"/>
                 <div>Blood Group: {this.props.user.bloodGroup}</div>
-                <button>Posts</button>
+                <button onClick={this.fetchUserPosts}>Posts</button>
+                <PostComponent posts={this.state.posts} postsLoaded={this.state.postsLoaded} />
             </div>
         );
     }

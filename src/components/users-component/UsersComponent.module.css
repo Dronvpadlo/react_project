@@ -1,0 +1,7 @@
+.background{
+    background-color: #777777;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}

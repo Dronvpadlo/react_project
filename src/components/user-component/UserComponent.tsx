@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { IUser } from "../../models/IUser";
 import PostComponent from "../post-component/PostComponent";
+import styles from './UserComponent.module.css'
 
 type PropType = {
     user: IUser,

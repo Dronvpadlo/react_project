@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { IUser } from "../../models/IUser";
 import { userService } from "../../services/api.service";
 import UserComponent from "../user-component/UserComponent";
+import styles from './UsersComponent.module.css'
 
 type StateType = {
     users: IUser[]
@@ -22,7 +23,7 @@ class UsersComponent extends Component<{}, StateType> {
 
     render() {
         return (
-            <div>
+            <div className={styles.background}>
                 {
                     this.state.users.map(user => (<UserComponent key={user.id} user={user}/>))
                 }

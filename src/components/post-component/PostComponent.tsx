@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './postComponent.module.css'
 
 type PostType = {
     id: number,

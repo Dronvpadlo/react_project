@@ -13,12 +13,5 @@ const userService = {
          return axiosResponce.data
     },
 }
-const postService = {
-    getAllPosts: async () =>{
-        let axiosResponce = await axiosInstance.get(urls.usersUrl.withPosts(1));
-
-        return axiosResponce.data
-    },
-}
 
 export {userService}

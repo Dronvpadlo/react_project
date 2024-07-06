@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './postComponent.module.css'
+import React, { Component } from 'react';
+import styles from './postComponent.module.css';
 
 type PostType = {
     id: number,
@@ -12,23 +12,29 @@ type PropType = {
     postsLoaded: boolean
 }
 
-const PostComponent: React.FC<PropType> = ({ posts, postsLoaded }) => {
-    return (
-        <div>
-            {postsLoaded && posts.length === 0 ? (
-                <div>No posts available</div>
-            ) : (
-                <ul>
-                    {posts.map(post => (
-                        <div key={post.id}>
-                            {post.title}
-                            {post.body}
-                        </div>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
+class PostComponent extends Component<PropType> {
+    render() {
+        const { posts, postsLoaded } = this.props;
+
+        return (
+            <div className={styles.bgc}>
+                {postsLoaded && posts.length === 0 ? (
+                    <div>No posts available</div>
+                ) : (
+                    postsLoaded && (
+                        <ul>
+                            {posts.map(post => (
+                                <li key={post.id}>
+                                    <h3>{post.title}</h3>
+                                    <p>{post.body}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    )
+                )}
+            </div>
+        );
+    }
 }
 
 export default PostComponent;

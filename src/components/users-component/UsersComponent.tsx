@@ -13,11 +13,12 @@ class UsersComponent extends Component<{}, StateType> {
     };
 
     componentDidMount() {
-        userService.getAll().then(value =>{
+        userService.getAllUsers().then(value =>{
             this.setState({users: [...value.users]})
 
         })
     }
+
 
     render() {
         return (

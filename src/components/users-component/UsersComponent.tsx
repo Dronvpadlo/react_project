@@ -12,14 +12,18 @@ class UsersComponent extends Component<{}, StateType> {
     };
 
     componentDidMount() {
-        userService.getAll().then(value => this.setState({users: value}));
+        userService.getAll().then(value =>{
+            this.setState({users: [...value.users]})
+
+        console.log(value)
+        })
     }
 
     render() {
         return (
             <div>
                 {
-                    this.state.users.map(user => <div>{user.firstName}</div> )
+                    this.state.users.map(user => <div key={user.id}></div> )
                 }
             </div>
         );

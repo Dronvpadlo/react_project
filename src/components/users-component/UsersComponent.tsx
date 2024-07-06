@@ -15,7 +15,7 @@ class UsersComponent extends Component<{}, StateType> {
         userService.getAll().then(value =>{
             this.setState({users: [...value.users]})
 
-        console.log(value)
+        console.log(value.users)
         })
     }
 
@@ -23,7 +23,7 @@ class UsersComponent extends Component<{}, StateType> {
         return (
             <div>
                 {
-                    this.state.users.map(user => <div key={user.id}></div> )
+                    this.state.users.map(user => <div key={user.id}>{user.firstName}</div> )
                 }
             </div>
         );

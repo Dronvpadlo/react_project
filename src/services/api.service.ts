@@ -8,10 +8,11 @@ let axiosInstance =  axios.create({
 });
 
 const userService = {
-    getAll: async (): Promise<IUser[]> =>{
-         let axiosResponce = await axiosInstance.get<IUser[]>(urls.usersUrl.all);
+    getAll: async () =>{
+         let axiosResponce = await axiosInstance.get(urls.usersUrl.all);
+
          return axiosResponce.data
-    }
+    },
 }
 
 export {userService}

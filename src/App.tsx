@@ -1,12 +1,18 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 
 import './App.css';
-import PostComponent from "./components/PostComponent";
+import PostForm from "./components/PostForm/PostForm";
+import PostsComponent from "./components/PostsComponent/PostsComponent";
+
+
 
 const App: FC = () => {
+    const [change, setChange] = useState<boolean>(false)
+
   return (
     <div>
-      <PostComponent/>
+      <PostForm setChange={setChange}/>
+      <PostsComponent change={change}/>
     </div>
   );
 }

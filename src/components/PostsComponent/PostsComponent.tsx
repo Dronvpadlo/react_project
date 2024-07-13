@@ -1,22 +1,15 @@
-import React, {FC, PropsWithChildren, useEffect, useState} from 'react';
-import {IPosts} from "../../models/IPosts";
-import {postService} from "../../services/postService";
+import React, { FC, PropsWithChildren,} from 'react';
+import { IPosts } from "../../models/IPosts";
 import PostComponent from "../PostComponent/PostComponent";
 
-interface IProps extends PropsWithChildren{
-    change: boolean;
-
+interface IProps extends PropsWithChildren {
+    allPosts: IPosts[];
 }
 
-const PostsComponent:FC<IProps> = ({change}) => {
-    const [posts, setPost] = useState<IPosts[]>([]);
-
-    useEffect(()=>{
-        postService.getAll().then(({data})=>setPost(data))
-    })
+const PostsComponent: FC<IProps> = ({ allPosts }) => {
     return (
         <div>
-            {posts.map(post => <PostComponent key={post.id} post={post}/>)}
+            {allPosts.map(post => <PostComponent key={post.id} post={post} />)}
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React, { FC, PropsWithChildren,} from 'react';
 import { IPosts } from "../../models/IPosts";
 import PostComponent from "../PostComponent/PostComponent";
+import styles from './PostsComponent.module.css'
 
 interface IProps extends PropsWithChildren {
     allPosts: IPosts[];
@@ -8,7 +9,7 @@ interface IProps extends PropsWithChildren {
 
 const PostsComponent: FC<IProps> = ({ allPosts }) => {
     return (
-        <div>
+        <div className={styles.posts}>
             {allPosts.map(post => <PostComponent key={post.id} post={post} />)}
         </div>
     );

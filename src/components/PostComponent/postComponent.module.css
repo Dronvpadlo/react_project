@@ -1,0 +1,10 @@
+.post{
+    border: solid #f9d5ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #ffaefb;
+    padding: 40px;
+    
+}

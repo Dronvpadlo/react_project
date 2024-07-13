@@ -4,6 +4,7 @@ import PostForm from "./components/PostForm/PostForm";
 import PostsComponent from "./components/PostsComponent/PostsComponent";
 import { IPosts } from './models/IPosts';
 import { postService } from './services/postService';
+import styles from './App.module.css'
 
 const App: FC = () => {
     const [allPosts, setAllPosts] = useState<IPosts[]>([]);
@@ -28,8 +29,12 @@ const App: FC = () => {
 
     return (
         <div>
+            <div>
             <PostForm addPost={addPost} />
+            </div>
+            <div className={styles.marginTop}>
             <PostsComponent allPosts={allPosts} />
+            </div>
         </div>
     );
 }

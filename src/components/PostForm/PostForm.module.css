@@ -1,0 +1,46 @@
+.positionForm{
+    position: fixed;
+    width: 100%;
+    background-color: #ffc8c8;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+.userIdInput{
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 20px;
+    text-align: center;
+    width: 3.2vw;
+}
+.titleInput{
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 20px;
+    text-align: center;
+    width: 8vw;
+}
+.bodyInput{
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 20px;
+    text-align: center;
+    width: 73vw;
+}
+.button{
+    font-size: 20px;
+}
+.errors{
+    display: flex;
+    font-size: 18px;
+}
+.error{
+    border: solid 2px black;
+    padding: 5px;
+    color: red;
+    border-radius: 20px;
+    background-color: #fff;
+}

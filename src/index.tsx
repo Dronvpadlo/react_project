@@ -9,6 +9,8 @@ import UsersPage from "./pages/users/UsersPage";
 import PostsPage from "./pages/posts/PostsPage";
 import CommentsPage from "./pages/comments/CommentsPage";
 import ErrorLayout from "./layouts/ErrorLayout";
+import React from "react";
+import UserPage from "./pages/user/UserPage";
 
 
 
@@ -23,6 +25,10 @@ const browserRouter = createBrowserRouter([
             {
                 path: 'users',
                 element: <UsersPage/>
+            },
+            {
+              path: 'users/:id',
+                element: <UserPage/>
             },
             {
                 path: 'posts',

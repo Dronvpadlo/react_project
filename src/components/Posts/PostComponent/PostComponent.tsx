@@ -7,7 +7,7 @@ import {IPost} from "../../../types/IPost";
 
 
 
-type UserComponentWithChildren<T> = T & {children?: ReactNode} & {clickHandler: (userId: number) => void}
+type UserComponentWithChildren<T> = T & {children?: ReactNode} & {clickHandler: (id: number) => void}
 const PostComponent:FC<UserComponentWithChildren<IPost>> = ({id, userId, title, body, clickHandler}) => {
     return (
         <div>
@@ -16,7 +16,7 @@ const PostComponent:FC<UserComponentWithChildren<IPost>> = ({id, userId, title, 
             Title: {title}<br/>
             Body: {body}<br/>
             <button onClick={() => {
-                clickHandler(userId)
+                clickHandler(id)
             }}>Comments
             </button>
         </div>

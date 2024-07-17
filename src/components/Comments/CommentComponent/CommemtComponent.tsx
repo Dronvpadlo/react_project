@@ -9,8 +9,9 @@ const CommentComponent:FC<CommentComponentWithChildren<IComment>> = ({postId, id
     return (
         <div>
             Post Id: {postId}<br/>
-            {id}. {name}<br/>
-            Email:{email}<br/>
+            ID: {id}<br/>
+            Name: {name}<br/>
+            Email: {email}<br/>
             Body: {body}<br/>
             <hr/>
         </div>

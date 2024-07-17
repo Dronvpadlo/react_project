@@ -4,7 +4,7 @@ const getAllUsers = async ()=>{
         .then(value => value.json())
 
 }
-const getPostsOfUserByUser = async (id:number)=>{
+const getPostsOfUserByUser = async (id:number): Promise<any>=>{
     return await fetch(baseUrl + '/users/' + id + '/posts')
         .then(value => value.json())
 

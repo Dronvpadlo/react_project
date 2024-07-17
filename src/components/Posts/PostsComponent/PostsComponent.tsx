@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
-import {getAllPosts, getCommentsOfUserByPost, getPostsOfUserByUserId} from "../../../services/api.service";
+import {getAllPosts, getCommentsOfUserByPost} from "../../../services/api.service";
 import {IPost} from "../../../types/IPost";
 import PostComponent from "../PostComponent/PostComponent";
 import {IComment} from "../../../types/IComment";

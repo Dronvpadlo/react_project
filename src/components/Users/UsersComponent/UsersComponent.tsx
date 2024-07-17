@@ -3,7 +3,7 @@ import UserComponent from "../UserComponent/UserComponent";
 import {getAllUsers, getPostsOfUserByUserId} from "../../../services/api.service";
 import {IUser} from "../../../types/IUser";
 import {IPost} from "../../../types/IPost";
-import PostComponent from "../../Posts/PostComponent/PostComponent";
+import UserPostComponent from "../../Posts/UserPostComponent/UserPostComponent";
 
 const UsersComponent:FC = () => {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -34,13 +34,12 @@ const UsersComponent:FC = () => {
                     clickHandler={clickHandler}/>)
             }
             {
-                posts.map(({userId, id, title, body}, index) => <PostComponent
+                posts.map(({userId, id, title, body}, index) => <UserPostComponent
                     key={index}
                     id={id}
                     title={title}
                     userId={userId}
-                    body={body}
-                    clickHandler={clickHandler}/>)
+                    body={body}/>)
             }
 
         </div>

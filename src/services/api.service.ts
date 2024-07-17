@@ -9,6 +9,11 @@ const getPostsOfUserByUser = async (id:number): Promise<any>=>{
         .then(value => value.json())
 
 }
+const getAllPosts = async ()=>{
+    return await fetch(baseUrl+'/posts')
+        .then(value => value.json())
+
+}
 
 
-export {getAllUsers, getPostsOfUserByUser}
+export {getAllUsers, getPostsOfUserByUser, getAllPosts}

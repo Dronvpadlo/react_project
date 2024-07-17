@@ -1,7 +1,8 @@
 import React, {FC, useEffect, useState} from 'react';
 import {IComment} from "../../../types/IComment";
 import {getAllComments} from "../../../services/api.service";
-import CommentComponent from "../CommentComponent/CommemtComponent";
+import CommentComponent from "../CommentComponent/CommentComponent";
+import styles from './CommentsComponent.module.css'
 
 const CommentsComponent:FC = () => {
 
@@ -15,7 +16,7 @@ const CommentsComponent:FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.mainBlock}>
             {
                 comments.map(({postId, id, name, email, body}, index) =>
                     <CommentComponent

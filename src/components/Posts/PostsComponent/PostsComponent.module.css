@@ -2,9 +2,9 @@
     display: flex;
 }
 .postsBlock{
-    width: 18vw;
+    width: 38vw;
 }
 .commentsBlock{
     margin-left: 2vh;
-    width: 80vw;
+    width: 60vw;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import CommentsComponent from "../../components/Comments/CommentsComponent/CommentsComponent";
-
+import styles from './CommentsPage.module.css'
 const CommentsPage = () => {
     return (
-        <div>
+        <div className={styles.bgc}>
             <CommentsComponent/>
         </div>
     );

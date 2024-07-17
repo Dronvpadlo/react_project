@@ -1,0 +1,4 @@
+.mainBlock{
+    display: flex;
+    flex-direction: column;
+}

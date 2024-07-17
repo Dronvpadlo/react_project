@@ -3,7 +3,7 @@ import {getAllPosts, getCommentsOfUserByPost} from "../../../services/api.servic
 import {IPost} from "../../../types/IPost";
 import PostComponent from "../PostComponent/PostComponent";
 import {IComment} from "../../../types/IComment";
-import CommentComponent from "../../Comments/CommentComponent/CommemtComponent";
+import CommentComponent from "../../Comments/CommentComponent/CommentComponent";
 import styles from './PostsComponent.module.css'
 
 const PostsComponent:FC = () => {

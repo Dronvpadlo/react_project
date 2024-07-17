@@ -3,7 +3,8 @@ import UserComponent from "../UserComponent/UserComponent";
 import {getAllUsers, getPostsOfUserByUserId} from "../../../services/api.service";
 import {IUser} from "../../../types/IUser";
 import {IPost} from "../../../types/IPost";
-import UserPostComponent from "../../Posts/UserPostComponent/UserPostComponent";
+import UserPostsComponent from "../../Posts/UserPostComponent/UserPostsComponent";
+import styles from './Users.module.css'
 
 const UsersComponent:FC = () => {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -23,7 +24,8 @@ const UsersComponent:FC = () => {
             });
     }
     return (
-        <div>
+        <div className={styles.mainDiv}>
+            <div className={styles.usersBlock}>
             {
                 users.map(({id, name, username, email}, index) => <UserComponent
                     key={index}
@@ -33,15 +35,17 @@ const UsersComponent:FC = () => {
                     email={email}
                     clickHandler={clickHandler}/>)
             }
+            </div>
+            <div className={styles.postsBlock}>
             {
-                posts.map(({userId, id, title, body}, index) => <UserPostComponent
+                posts.map(({userId, id, title, body}, index) => <UserPostsComponent
                     key={index}
                     id={id}
                     title={title}
                     userId={userId}
                     body={body}/>)
             }
-
+            </div>
         </div>
     );
 };

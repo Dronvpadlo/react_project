@@ -1,0 +1,9 @@
+.userPostSection{
+    background-color: #567c68;
+    margin: 1vh 0 1vh 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 14vh;
+}

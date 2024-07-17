@@ -19,7 +19,6 @@ const PostComponent:FC<UserComponentWithChildren<IPost>> = ({id, userId, title, 
                 clickHandler(userId)
             }}>Comments
             </button>
-            <hr/>
         </div>
     );
 };

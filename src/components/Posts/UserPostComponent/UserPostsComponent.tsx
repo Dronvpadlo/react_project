@@ -1,23 +1,21 @@
 import React, {FC, ReactNode} from 'react';
-
 import {IPost} from "../../../types/IPost";
-
+import styles from './UserPosts.module.css'
 
 
 
 
 
 type UserComponentWithChildren<T> = T & {children?: ReactNode}
-const UserPostComponent:FC<UserComponentWithChildren<IPost>> = ({id, userId, title, body}) => {
+const UserPostsComponent:FC<UserComponentWithChildren<IPost>> = ({id, userId, title, body}) => {
     return (
-        <div>
+        <div className={styles.userPostSection}>
             ID: {id}<br/>
             User ID: {userId}<br/>
             Title: {title}<br/>
             Body: {body}<br/>
-            <hr/>
         </div>
     );
 };
 
-export default UserPostComponent;
+export default UserPostsComponent;

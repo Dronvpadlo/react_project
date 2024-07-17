@@ -12,8 +12,8 @@ const UsersComponent = () => {
                 setUsers(users);
             });
     }, []);
-    const clickHandler = () => {
-        console.log('Vpadlo')
+    const clickHandler = (id: number) => {
+        console.log(id)
     }
     return (
         <div>
@@ -24,7 +24,7 @@ const UsersComponent = () => {
                     name={name}
                     username={username}
                     email={email}
-                    postClicker={clickHandler}/>)
+                    clickHandler={clickHandler}/>)
             }
         </div>
     );

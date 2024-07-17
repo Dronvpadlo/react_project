@@ -9,10 +9,10 @@ type UserComponentWithChildren<T> = T & {children?: ReactNode}
 const PostComponent:FC<UserComponentWithChildren<IPost>> = ({id, userId, title, body}) => {
     return (
         <div>
-            {id}<br/>
-            {userId}
-            {title} <br/>
-            {body}<br/>
+            ID: {id}<br/>
+            User ID: {userId}<br/>
+            Title: {title}<br/>
+            Body: {body}<br/>
         </div>
     );
 };

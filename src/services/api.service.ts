@@ -14,6 +14,11 @@ const getAllPosts = async ()=>{
         .then(value => value.json())
 
 }
+const getAllComments = async ()=>{
+    return await fetch(baseUrl+'/comments')
+        .then(value => value.json())
+
+}
 
 
-export {getAllUsers, getPostsOfUserByUser, getAllPosts}
+export {getAllUsers, getPostsOfUserByUser, getAllPosts, getAllComments}

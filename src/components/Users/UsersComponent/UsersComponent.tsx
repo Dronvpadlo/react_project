@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import UserComponent from "../UserComponent/UserComponent";
 import {getAllUsers} from "../../../services/api.service";
 import {IUser} from "../../../types/IUser";
 
-const UsersComponent = () => {
+const UsersComponent:FC = () => {
     const [users, setUsers] = useState<IUser[]>([]);
 
     useEffect(() => {

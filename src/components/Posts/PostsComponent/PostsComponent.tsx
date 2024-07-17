@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {getAllPosts} from "../../../services/api.service";
 import {IPost} from "../../../types/IPost";
 import PostComponent from "../PostComponent/PostComponent";
 
-const PostsComponent = () => {
+const PostsComponent:FC = () => {
     const [posts, setPosts] = useState<IPost[]>([])
 
     useEffect(() => {

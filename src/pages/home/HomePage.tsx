@@ -3,7 +3,7 @@ import React from 'react';
 const HomePage = () => {
     return (
         <div>
-            <img src="https://gamefreaks365.com/wp-content/uploads/2020/09/Mafia-Definitive-Edition-Lost-Heaven-screenshot.jpg" alt="TheLostHeaven"/>
+            <img src="https://w.wallhaven.cc/full/6d/wallhaven-6dgmow.png" alt="TheLostHeaven"/>
         </div>
     );
 };

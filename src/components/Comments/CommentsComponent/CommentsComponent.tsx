@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {IComment} from "../../../types/IComment";
 import {getAllComments} from "../../../services/api.service";
 import CommentComponent from "../CommentComponent/CommemtComponent";
 
-const CommentsComponent = () => {
+const CommentsComponent:FC = () => {
 
     const [comments, setComments] = useState<IComment[]>([])
 

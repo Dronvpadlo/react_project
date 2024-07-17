@@ -1,14 +1,14 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import styles from './Header.module.css'
 
 const HeaderComponent = () => {
     return (
-        <div>
-            <NavLink to={'/'}>Home</NavLink><br/>
-            <NavLink to={'users'}>Users</NavLink><br/>
-            <NavLink to={'posts'}>Posts</NavLink><br/>
-            <NavLink to={'comments'}>Comments</NavLink>
-            <hr/>
+        <div className={styles.header}>
+            <NavLink className={styles.font} to={'/'}>Home</NavLink>
+            <NavLink className={styles.font} to={'users'}>Users</NavLink>
+            <NavLink className={styles.font} to={'posts'}>Posts</NavLink>
+            <NavLink className={styles.font} to={'comments'}>Comments</NavLink>
         </div>
     );
 };

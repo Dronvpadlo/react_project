@@ -1,7 +1,9 @@
 import React, {FC, useEffect, useState} from 'react';
 import UserComponent from "../UserComponent/UserComponent";
-import {getAllUsers} from "../../../services/api.service";
+import {getAllUsers, getPostsOfUserByUserId} from "../../../services/api.service";
 import {IUser} from "../../../types/IUser";
+import {IPost} from "../../../types/IPost";
+import PostComponent from "../../Posts/PostComponent/PostComponent";
 
 const UsersComponent:FC = () => {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -12,8 +14,13 @@ const UsersComponent:FC = () => {
                 setUsers(users);
             });
     }, []);
+
+    const [posts, setPosts] = useState<IPost[]>([])
     const clickHandler = (id: number) => {
-        console.log(id)
+        getPostsOfUserByUserId(id)
+            .then(posts =>{
+                setPosts(posts)
+            });
     }
     return (
         <div>
@@ -26,6 +33,16 @@ const UsersComponent:FC = () => {
                     email={email}
                     clickHandler={clickHandler}/>)
             }
+            {
+                posts.map(({userId, id, title, body}, index) => <PostComponent
+                    key={index}
+                    id={id}
+                    title={title}
+                    userId={userId}
+                    body={body}
+                    clickHandler={clickHandler}/>)
+            }
+
         </div>
     );
 };

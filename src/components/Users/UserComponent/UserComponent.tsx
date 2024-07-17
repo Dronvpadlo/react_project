@@ -9,8 +9,8 @@ const UserComponent:FC<UserComponentWithChildren<IUser>> = ({id, name, username,
     return (
         <div>
             {id}. {name} <br/>
-            Username:{username} <br/>
-            Email:{email}<br/>
+            Username: {username} <br/>
+            Email: {email}<br/>
 
             <button onClick={() =>{
                 clickHandler(id)}}>Posts</button>

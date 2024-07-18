@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {NavLink} from "react-router-dom";
 import styles from './Header.module.css'
 
-const HeaderComponent = () => {
+const HeaderComponent = memo(() => {
     return (
         <div className={styles.header}>
             <NavLink className={styles.font} to={'/'}>Home</NavLink>
@@ -11,6 +11,6 @@ const HeaderComponent = () => {
             <NavLink className={styles.font} to={'comments'}>Comments</NavLink>
         </div>
     );
-};
+});
 
 export default HeaderComponent;

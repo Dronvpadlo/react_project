@@ -3,13 +3,24 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MainLayout from "./Layouts/MainLayout";
+import HomePage from "./Pages/HomePage/HomePage";
+import ErrorLayout from "./Layouts/ErrorLayout";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 const router = createBrowserRouter([
     {
-        path: '/', element: <MainLayout/>
+        path: '/',
+        element: <MainLayout/>,
+        errorElement: <ErrorLayout/>,
+        children: [
+            {
+                path: 'home',
+                element: <HomePage/>
+            }
+        ]
+
 
     }
 ]);

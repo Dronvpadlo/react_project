@@ -10,6 +10,7 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
     {
         path: '/', element: <MainLayout/>
+
     }
 ]);
 root.render(

@@ -5,6 +5,9 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MainLayout from "./Layouts/MainLayout";
 import HomePage from "./Pages/HomePage/HomePage";
 import ErrorLayout from "./Layouts/ErrorLayout";
+import RegPage from "./Pages/RegPage/RegPage";
+import AuthPage from "./Pages/AuthPage/AuthPage";
+import CarsPage from "./Pages/CarsPage/CarsPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,7 +18,10 @@ const router = createBrowserRouter([
         element: <MainLayout/>,
         errorElement: <ErrorLayout/>,
         children: [
-            {path: 'home', element: <HomePage/>}
+            {path: 'home', element: <HomePage/>},
+            {path: 'reg', element: <RegPage/>},
+            {path: 'auth', element: <AuthPage/>},
+            {path: 'cars', element: <CarsPage/>}
         ]
 
 

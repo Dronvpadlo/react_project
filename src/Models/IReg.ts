@@ -3,7 +3,7 @@ export interface IReg{
     password: string
 }
 
-export interface IRegResponce{
+export interface IRegResponse{
     id: number,
     username: string,
     is_active: boolean,

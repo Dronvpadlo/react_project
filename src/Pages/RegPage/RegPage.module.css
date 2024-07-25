@@ -1,0 +1,21 @@
+.RegSection{
+    background-image: url('https://wallpaper.forfun.com/fetch/61/61fb7cd39461bb062d00b989356855e3.jpeg');
+    background-size: 100%, 90%;
+    background-repeat: no-repeat;
+    background-position: center; /* Зображення центрується */
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+}
+.FormSection{
+    display: flex;
+    justify-content: center;
+
+
+    background-color: #ffdbc3;
+    width: 24vw;
+    height: 45vh;
+    margin-top: 12vh;
+    border-radius: 15px;
+    border: solid 2px #f35f3e;
+}

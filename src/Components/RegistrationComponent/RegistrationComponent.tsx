@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useForm} from "react-hook-form";
 import {IReg} from "../../Models/IReg";
+import {userService} from "../../Services/api.service";
 
 const RegistrationComponent = () => {
 
@@ -9,8 +10,11 @@ const RegistrationComponent = () => {
         register
     } = useForm<IReg>()
 
-    const onSubmitHandler =(data:IReg) =>{
-console.log(data)
+    const [registrationStatus, setRegistrationStatus] = useState<boolean>(false)
+
+    const onSubmitHandler = async (data:IReg) =>{
+        let isReg = await userService.saveUser(data)
+        setRegistrationStatus(isReg)
     }
     return (
         <div>
@@ -19,6 +23,9 @@ console.log(data)
                 <input type="text" placeholder={'password'}{...register('password')}/><br/>
                 <button>Sing In</button>
             </form>
+            {
+                registrationStatus && (<div>Registration successfully</div>)
+            }
         </div>
     );
 };

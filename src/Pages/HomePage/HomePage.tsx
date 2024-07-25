@@ -3,7 +3,7 @@ import React from 'react';
 const HomePage = () => {
     return (
         <div>
-            <img src="https://c4.wallpaperflare.com/wallpaper/883/36/901/city-manhattan-new-york-city-street-wallpaper-preview.jpg" alt="Home"/>
+            <img src="https://www.wallpaperflare.com/static/997/958/566/antibes-img-city-lights-france-wallpaper.jpg" alt="Antibes" width={1680}/>
         </div>
     );
 };

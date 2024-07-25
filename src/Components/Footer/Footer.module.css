@@ -1,0 +1,9 @@
+.bgc{
+    background-color: #272038;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 0;
+}

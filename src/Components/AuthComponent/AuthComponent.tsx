@@ -2,6 +2,7 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {IAuth} from "../../Models/IAuth";
 import {authService} from "../../Services/api.service";
+import styles from './Auth.module.css'
 
 const AuthComponent = () => {
 
@@ -20,11 +21,12 @@ const AuthComponent = () => {
         authService.authUser(data);
     }
     return (
-        <div>
+        <div className={styles.section}>
+            <h3 className={styles.h2}>Authentication Form</h3><br/>
             <form onSubmit={handleSubmit(authenticate)}>
-                <input type="text" placeholder={'username'}{...register('username')}/><br/>
-                <input type="text" placeholder={'password'}{...register('password')}/><br/>
-                <button>Log In</button>
+                <input className={styles.input} type="text" placeholder={'username'}{...register('username')}/><br/>
+                <input className={styles.input} type="text" placeholder={'password'}{...register('password')}/><br/>
+                <button className={styles.button}>Log In</button>
             </form>
         </div>
     );

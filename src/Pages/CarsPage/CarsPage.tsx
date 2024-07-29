@@ -1,13 +1,37 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {carService} from "../../Services/api.service";
+import {AxiosError} from "axios";
+import {ICarsPaginated} from "../../Models/ICars";
+import CarsComponent from "../../Components/CarComponent/CarComponent";
 
 const CarsPage = () => {
+    const [carDataObject, setCarDataObject] = useState<ICarsPaginated>({
+        items: [],
+        next: null,
+        prev: null,
+        total_items: 0,
+        total_pages: 0
+    })
     useEffect(() => {
-        carService.getCars().then(value => console.log(value));
+        const getCarsData = async () => {
+            try {
+                let responce = await carService.getCars();
+                if (responce) {
+                    setCarDataObject(responce)
+                    console.log(carDataObject)
+                }
+            } catch (e) {
+                const axiosError = e as AxiosError;
+                if (axiosError && axiosError?.response?.status === 401) {
+                    console.log(e)
+                }
+            }
+        }
+            getCarsData()
     }, []);
     return (
         <div>
-            CarsPage
+            <CarsComponent cars={carDataObject.items}/>
         </div>
     );
 };

@@ -12,8 +12,8 @@ const AuthComponent = () => {
 
 } = useForm<IAuth>({
         defaultValues:{
-            username: 'SKDron714',
-            password: '$KDron284$'
+            username: 'SKDron',
+            password: '$KDr0n27'
         }
     })
 

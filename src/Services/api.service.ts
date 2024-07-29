@@ -14,10 +14,14 @@ const userService = {
 }
 
 const authService = {
-    authUser: async (data: IAuth):Promise<boolean> =>{
+    authUser: async (data: IAuth):Promise<void> =>{
         let response = await AxiosInstance.post<IAuthResponse>('/auth', data)
-        console.log(response)
-        return !!response.data.access || false
+        console.log(response.data.access)
+        localStorage.setItem('tokenPair', JSON.stringify(response.data))
+
     }
+}
+const carService = {
+    
 }
 export {userService, authService}

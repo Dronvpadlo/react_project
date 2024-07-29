@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {carService} from "../../Services/api.service";
 import {AxiosError} from "axios";
 import {ICarsPaginated} from "../../Models/ICars";
-import CarsComponent from "../../Components/CarComponent/CarComponent";
+import CarsComponent from "../../Components/CarsComponent/CarsComponent";
+
 
 const CarsPage = () => {
     const [carDataObject, setCarDataObject] = useState<ICarsPaginated>({

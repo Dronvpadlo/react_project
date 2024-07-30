@@ -1,12 +1,23 @@
 import React from 'react';
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
+import styles from './ErrorLayout.module.css'
+import {NavLink} from "react-router-dom";
 
 const ErrorLayout = () => {
     return (
         <div>
             <Header/>
-            <img src="https://c4.wallpaperflare.com/wallpaper/635/666/402/1930-year-artwork-new-york-city-car-vehicle-cityscape-classic-car-wallpaper-preview.jpg" alt="error"/>
+            <div className={styles.errorSection}>
+                <div className={styles.errorNav}>
+                    <h3>Sorry, but page not found.<br/>
+                    Maybe you searching something of this:</h3>
+                    <NavLink className={styles.linksStyle} to={'/home'}>Home</NavLink><br/>
+                    <NavLink className={styles.linksStyle} to={'/reg'}>Sing In</NavLink><br/>
+                    <NavLink className={styles.linksStyle} to={'/auth'}>Log In</NavLink><br/>
+                    <NavLink className={styles.linksStyle} to={'/cars'}>Cars List</NavLink><br/>
+                </div>
+            </div>
             <Footer/>
         </div>
     );

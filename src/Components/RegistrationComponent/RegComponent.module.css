@@ -30,3 +30,7 @@
     color: #ffdbc3;
     font-size: 16px;
 }
+.button:active{
+    background-color: #fe7f4a;
+    color: #8a0139;
+}

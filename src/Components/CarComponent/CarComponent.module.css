@@ -1,0 +1,16 @@
+.mainBlock{
+    width: 20vw;
+    height: 45vh;
+    background-color: #ffdbc3;
+}
+.carBlock{
+    border: solid 2px #fe7f4a;
+    height: 44vh;
+    border-radius: 15px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 22px;
+    color: #41173f;
+}

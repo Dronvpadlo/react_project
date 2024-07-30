@@ -19,7 +19,6 @@ const CarsPage = () => {
                 let responce = await carService.getCars();
                 if (responce) {
                     setCarDataObject(responce)
-                    console.log(carDataObject)
                 }
             } catch (e) {
                 const axiosError = e as AxiosError;

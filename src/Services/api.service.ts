@@ -28,7 +28,6 @@ const userService = {
 const authService = {
     authUser: async (data: IAuth):Promise<void> =>{
         let response = await AxiosInstance.post<IAuthResponse>('/auth', data)
-        console.log(response.data.access)
         localStorage.setItem('tokenPair', JSON.stringify(response.data))
 
     }
@@ -37,7 +36,6 @@ const carService = {
     getCars: async () => {
         let response = await AxiosInstance.get<ICarsPaginated>('/cars');
         let carsArr = response.data
-        console.log(carsArr.items)
         return carsArr;
     }
 

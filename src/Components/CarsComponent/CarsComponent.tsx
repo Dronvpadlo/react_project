@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {ICars} from "../../Models/ICars";
+import CarComponent from "../CarComponent/CarComponent";
 
 
 interface IProps {
@@ -9,11 +10,9 @@ const CarsComponent:FC<IProps> = ({cars}) => {
     return (
         <div>
             {
-                cars.map((car) =>(
-                    <div>{car.brand} {car.price}
-                    </div>
-                ))
-            }
+                cars.map(({brand, price, id, year}, index) => <CarComponent key={index} id={id} brand={brand} price={price} year={year}/>
+
+                )}
         </div>
     );
 };

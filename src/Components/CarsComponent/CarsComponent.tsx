@@ -9,7 +9,7 @@ const CarsComponent:FC<IProps> = ({cars}) => {
     return (
         <div>
             {
-                cars.map((car, index) =>(
+                cars.map((car) =>(
                     <div>{car.brand} {car.price}
                     </div>
                 ))

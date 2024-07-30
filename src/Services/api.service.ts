@@ -36,6 +36,7 @@ const carService = {
     getCars: async () => {
         let response = await AxiosInstance.get<ICarsPaginated>('/cars');
         let carsArr = response.data
+        console.log(carsArr)
         return carsArr;
     }
 

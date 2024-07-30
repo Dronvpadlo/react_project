@@ -1,8 +1,6 @@
 .AuthSection{
-    background-image: url('https://wallpaper.forfun.com/fetch/61/61fb7cd39461bb062d00b989356855e3.jpeg');
-    background-size: 100%, 90%;
-    background-repeat: no-repeat;
-    background-position: center; /* Зображення центрується */
+    background-image: url(https://images8.alphacoders.com/136/thumb-1920-1369908.jpeg);
+    background-size: cover;
     height: 93vh;
     display: flex;
     justify-content: center;

@@ -12,7 +12,6 @@ const ErrorLayout = () => {
                 <div className={styles.errorNav}>
                     <h3>Sorry, but page not found.<br/>
                     Maybe you searching something of this:</h3>
-                    <NavLink className={styles.linksStyle} to={'/home'}>Home</NavLink><br/>
                     <NavLink className={styles.linksStyle} to={'/reg'}>Sing In</NavLink><br/>
                     <NavLink className={styles.linksStyle} to={'/auth'}>Log In</NavLink><br/>
                     <NavLink className={styles.linksStyle} to={'/cars'}>Cars List</NavLink><br/>

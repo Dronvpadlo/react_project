@@ -11,29 +11,34 @@ let AxiosInstance = axios.create({
 
 AxiosInstance.interceptors.request.use(interceptorRequest =>{
 
-    if (localStorage.getItem('tokenPair') && interceptorRequest.url !== '/auth'){
+    if (localStorage.getItem('tokenPair') && (interceptorRequest.url !== '/auth' && interceptorRequest.url !== '/auth/refresh')){
         interceptorRequest.headers.set('Authorization', 'Bearer ' + getLocalStorageData<IAuthResponse>('tokenPair').access)
     }
+
 
     return interceptorRequest;
 })
 
 const userService = {
     saveUser: async (data: IReg):Promise<boolean> =>{
-        let response = await AxiosInstance.post<IRegResponse>('/users', data)
+        const response = await AxiosInstance.post<IRegResponse>('/users', data)
         return !!response.data.username || false
     }
 }
 
 const authService = {
     authUser: async (data: IAuth):Promise<void> =>{
-        let response = await AxiosInstance.post<IAuthResponse>('/auth', data)
+        const response = await AxiosInstance.post<IAuthResponse>('/auth', data)
         localStorage.setItem('tokenPair', JSON.stringify(response.data))
-
+    },
+    refresh: async  (): Promise<void> =>{
+        const refreshToken = getLocalStorageData<IAuthResponse>('tokenPair').refresh;
+        const response = await AxiosInstance.post<IAuthResponse>('/auth/refresh', {refresh: refreshToken});
+        localStorage.setItem('tokenPair', JSON.stringify(response.data));
     }
 }
 const carService = {
-    getCars: async () => {
+    getCars: async (): Promise<ICarsPaginated> => {
         let response = await AxiosInstance.get<ICarsPaginated>('/cars');
         let carsArr = response.data
         console.log(carsArr)

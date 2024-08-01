@@ -1,0 +1,12 @@
+.pageSection{
+    height: 93vh;
+    background-color: #ffdbc3;
+}
+.carsBlock{
+    height: 90vh;
+}
+.buttonsBlock{
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+}

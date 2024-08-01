@@ -5,6 +5,7 @@ import {ICarsPaginated} from "../../Models/ICars";
 import CarsComponent from "../../Components/CarsComponent/CarsComponent";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import PaginationComponent from "../../Components/PaginationComponent/PaginationComponent";
+import styles from './CarsPage.module.css'
 
 
 const CarsPage = () => {
@@ -42,9 +43,11 @@ const CarsPage = () => {
             getCarsData()
     }, [query]);
     return (
-        <div>
-            <CarsComponent cars={carDataObject.items}/>
-            <PaginationComponent next={carDataObject.next} prev={carDataObject.prev}/>
+        <div className={styles.pageSection}>
+            <div className={styles.carsBlock}> <CarsComponent cars={carDataObject.items}/>
+            </div>
+            <div className={styles.buttonsBlock}> <PaginationComponent next={carDataObject.next} prev={carDataObject.prev}/>
+            </div>
         </div>
     );
 };

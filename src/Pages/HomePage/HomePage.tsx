@@ -3,7 +3,7 @@ import styles from './HomePage.module.css'
 import {NavLink} from "react-router-dom";
 const HomePage = () => {
     return (
-        <div className={styles.homeSection}>
+        <div className={styles.section}>
             <div className={styles.homeNav}>
                 <h3>Welcome!!!</h3>
                 <NavLink className={styles.linksStyle} to={'/reg'}>Sing In</NavLink><br/>

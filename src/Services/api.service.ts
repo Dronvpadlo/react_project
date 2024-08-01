@@ -44,6 +44,5 @@ const carService = {
         console.log(carsArr)
         return carsArr;
     }
-
 }
 export {userService, authService, carService}

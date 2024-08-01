@@ -43,7 +43,7 @@ const CarsPage = () => {
             getCarsData()
     }, [query]);
     return (
-        <div className={styles.pageSection}>
+        <div className={styles.section}>
             <div className={styles.carsBlock}> <CarsComponent cars={carDataObject.items}/>
             </div>
             <div className={styles.buttonsBlock}> <PaginationComponent next={carDataObject.next} prev={carDataObject.prev}/>

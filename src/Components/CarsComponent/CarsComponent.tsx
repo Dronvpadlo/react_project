@@ -11,11 +11,9 @@ const CarsComponent:FC<IProps> = ({cars}) => {
         <div className={styles.mainSection}>
 
             {
-                cars.map(({brand, price, id, year}, index) => <CarComponent key={index} id={id} brand={brand}
-                                                                            price={price} year={year}/>
+                cars.map(({brand, price, id, year}, index) =>
+                    <CarComponent key={index} id={id} brand={brand} price={price} year={year}/>
                 )}
-            <button className={styles.button}>Prev</button>
-            <button className={styles.button}>Next</button>
         </div>
 
     );

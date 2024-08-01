@@ -38,8 +38,8 @@ const authService = {
     }
 }
 const carService = {
-    getCars: async (): Promise<ICarsPaginated> => {
-        let response = await AxiosInstance.get<ICarsPaginated>('/cars');
+    getCars: async (page: string = '1'): Promise<ICarsPaginated> => {
+        let response = await AxiosInstance.get<ICarsPaginated>('/cars', {params: {page: page}});
         let carsArr = response.data
         console.log(carsArr)
         return carsArr;

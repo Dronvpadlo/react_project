@@ -5,6 +5,7 @@ import HomePage from "../Pages/HomePage/HomePage";
 import RegPage from "../Pages/RegPage/RegPage";
 import AuthPage from "../Pages/AuthPage/AuthPage";
 import CarsPage from "../Pages/CarsPage/CarsPage";
+import CarsPostPage from "../Pages/CarsPostPage/CarsPostPage";
 
 export const router = createBrowserRouter([
     {
@@ -15,7 +16,8 @@ export const router = createBrowserRouter([
             {index: true, element: <HomePage/>},
             {path: 'reg', element: <RegPage/>},
             {path: 'auth', element: <AuthPage/>},
-            {path: 'cars', element: <CarsPage/>}
+            {path: 'cars', element: <CarsPage/>},
+            {path: 'postCar', element: <CarsPostPage/>}
         ]
 
 

@@ -8,7 +8,7 @@ const Header = () => {
             <NavLink className={styles.inputStyle} to={'/reg'}>Sing In</NavLink><br/>
             <NavLink className={styles.inputStyle} to={'/auth'}>Log In</NavLink><br/>
             <NavLink className={styles.inputStyle} to={'/cars'}>Cars List</NavLink><br/>
-
+            <NavLink className={styles.inputStyle} to={'/postCar'}>Cars Add</NavLink><br/>
         </div>
     );
 };

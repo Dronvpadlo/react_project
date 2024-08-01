@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from './CarsPostPage.module.css'
 
+import CarsPostComponent from "../../Components/CarsPostComponent/CarsPostComponent";
 const CarsPostPage = () => {
     return (
-        <div>
-            <input type="text" placeholder={'Brand'}/>
-            <input type="text" placeholder={'Price'}/>
-            <input type="text" placeholder={'Year'}/>
-            <button>Post Car</button>
+        <div className={styles.section}>
+            <div className={styles.formSection}>
+                <CarsPostComponent/>
+            </div>
         </div>
     );
 };

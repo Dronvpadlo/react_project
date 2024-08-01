@@ -6,6 +6,7 @@
 .carBlock{
     border: solid 2px #fe7f4a;
     height: 44vh;
+    width: 19vw;
     border-radius: 15px;
     padding-left: 10px;
     display: flex;

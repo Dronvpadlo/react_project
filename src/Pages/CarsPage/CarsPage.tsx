@@ -35,6 +35,7 @@ const CarsPage = () => {
 
                     try {
                         await authService.refresh();
+                        carService.getCars();
                     } catch (e) {
                         return navigate('/auth');
                     }

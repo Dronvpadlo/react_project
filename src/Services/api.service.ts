@@ -4,6 +4,7 @@ import {IAuth, IAuthResponse} from "../Models/IAuth";
 import {getLocalStorageData} from '../Utility/Utility'
 import {ICarsPaginated} from "../Models/ICars";
 import {useNavigate} from "react-router-dom";
+import {log} from "node:util";
 
 
 let AxiosInstance = axios.create({
@@ -36,8 +37,7 @@ const authService = {
         const refreshToken = getLocalStorageData<IAuthResponse>('tokenPair').refresh;
         const response = await AxiosInstance.post<IAuthResponse>('/auth/refresh', {refresh: refreshToken});
         localStorage.setItem('tokenPair', JSON.stringify(response.data));
-        console.log('refresh')
-
+        console.log('refresh');
     }
 }
 const carService = {

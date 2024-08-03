@@ -3,9 +3,10 @@ import {useForm} from "react-hook-form";
 import {IAuth} from "../../Models/IAuth";
 import {authService} from "../../Services/api.service";
 import styles from './Auth.module.css'
+import {useNavigate} from "react-router-dom";
 
 const AuthComponent = () => {
-
+    let navigate = useNavigate();
     let {
         handleSubmit,
         register
@@ -19,6 +20,7 @@ const AuthComponent = () => {
 
     const authenticate =(data:IAuth) =>{
         authService.authUser(data);
+        return navigate('/cars');
     }
     return (
         <div className={styles.section}>

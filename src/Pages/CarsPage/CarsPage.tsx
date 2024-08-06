@@ -31,11 +31,9 @@ const CarsPage = () => {
             } catch (e) {
                 const axiosError = e as AxiosError;
                 if (axiosError && axiosError?.response?.status === 401) {
-
-
                     try {
                         await authService.refresh();
-                        carService.getCars();
+                        await carService.getCars();
                     } catch (e) {
                         return navigate('/auth');
                     }

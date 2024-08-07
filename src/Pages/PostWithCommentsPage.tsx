@@ -1,10 +1,10 @@
 import React from 'react';
-import PostWithCommentsComponent from "../Components/Posts/PostWithCommentsComponent";
+import PostsWithCommentsComponent from "../Components/Posts/PostsWithCommentsComponent";
 
 const PostWithCommentsPage = () => {
     return (
         <div>
-            <PostWithCommentsComponent/>
+            <PostsWithCommentsComponent/>
         </div>
     );
 };

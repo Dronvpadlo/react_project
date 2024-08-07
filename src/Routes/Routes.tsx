@@ -6,16 +6,16 @@ import CommentsPage from "../Pages/CommentsPage";
 import MainLayouts from "../Layouts/MainLayouts";
 import HomePage from "../Pages/HomePage";
 import UsersWithPostsComponent from "../Components/Users/UsersWithPostsComponent";
+import PostsWithCommentsComponent from "../Components/Posts/PostsWithCommentsComponent";
 
-let id = 2;
 const routes = [{
     path: '/', element: <MainLayouts/>, children:[
         {path: 'home', element: <HomePage/>},
         {path: 'users', element: <UsersPage/>},
         {path: 'posts', element: <PostsPage/>},
         {path: 'comments', element: <CommentsPage/>},
-        {path: 'users/' + id +'/posts' , element: <UsersWithPostsComponent/>},
-        {path: 'posts/' + id +'/comments' , element: <UsersWithPostsComponent/>}
+        {path: 'usersPosts' , element: <UsersWithPostsComponent/>},
+        {path: 'postsComments' , element: <PostsWithCommentsComponent/>}
     ]
 }]
 export const router = createBrowserRouter(routes)

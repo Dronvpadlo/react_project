@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Header from "../Components/Header";
 import {Outlet} from "react-router-dom";
 import Footer from "../Components/Footer";
-import {MyContext} from "../Context/ContextProvider";
+import {MyContext} from "../Context/Store";
 import {IUsersModel} from "../Models/IUsersModel";
 import {IPostsModel} from "../Models/IPostsModel";
 import {ICommentsModel} from "../Models/ICommentsModel";
@@ -13,6 +13,7 @@ const MainLayouts = () => {
     const [users, setUsers] = useState<IUsersModel[]>([]);
     const [posts, setPosts] = useState<IPostsModel[]>([]);
     const [comments, setComments] = useState<ICommentsModel[]>([]);
+    const [favoriteUserState, setFavoriteUserState] = useState<IUsersModel | null>(null)
 
     useEffect(() => {
         userService.getUsers().then(value => setUsers(value.data));
@@ -20,26 +21,36 @@ const MainLayouts = () => {
         commentService.getComments().then(value => setComments(value.data));
     }, []);
 
+    const setFavoriteUser = (obj: IUsersModel) =>{
+        setFavoriteUserState(obj);
+    }
+
     return (
         <div>
             <MyContext.Provider value={
                 {
-                    userStore:{
-                         allUsers: users
+                    userStore: {
+                        allUsers: users,
+                        setFavoriteUser: (obj:IUsersModel) => setFavoriteUser(obj),
                     },
-                    postStore:{
-                         allPosts: posts
+                    postStore: {
+                        allPosts: posts
                     },
-                    commentStore:{
+                    commentStore: {
                         allComments: comments
                     }
 
                 }
             }>
-            <Header/>
-            <Outlet/>
-            </MyContext.Provider>
-            <Footer/>
+                <Header/>
+                <Outlet/>
+                <Footer/>
+            </MyContext.Provider>\
+            <hr/>
+            {
+                favoriteUserState && <div>{favoriteUserState.username}</div>
+            }
+            <hr/>
         </div>
     );
 };

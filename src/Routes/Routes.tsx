@@ -7,9 +7,12 @@ import MainLayouts from "../Layouts/MainLayouts";
 import HomePage from "../Pages/HomePage";
 import UsersWithPostsComponent from "../Components/Users/UsersWithPostsComponent";
 import PostsWithCommentsComponent from "../Components/Posts/PostsWithCommentsComponent";
+import ErrorsLayouts from "../Layouts/ErrorsLayouts";
 
 const routes = [{
-    path: '/', element: <MainLayouts/>,
+    path: '/',
+    element: <MainLayouts/>,
+    errorElement: <ErrorsLayouts/>,
 
     children:[
         {path: 'home', element: <HomePage/>},

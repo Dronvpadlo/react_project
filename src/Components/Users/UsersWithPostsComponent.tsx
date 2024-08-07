@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import {useContextProvider} from "../../Context/ContextProvider";
+import {useContextProvider} from "../../Context/Store";
 import UserWithPostsComponent from "./UserWithPostsComponent";
 import {UserWithPostsType} from "../../Models/UserWithPostsType";
 

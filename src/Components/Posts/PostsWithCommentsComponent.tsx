@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PostWithCommentsComponent from "./PostWithCommentsComponent";
-import {useContextProvider} from "../../Context/ContextProvider";
+import {useContextProvider} from "../../Context/Store";
 import {PostWithCommentsType} from "../../Models/PostWithCommentsType";
 
 const PostsWithCommentsComponent = () => {

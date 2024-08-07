@@ -6,7 +6,8 @@ import {createContext, useContext} from "react";
 
 type StoreType = {
     userStore: {
-        allUsers: IUsersModel[]
+        allUsers: IUsersModel[],
+        setFavoriteUser: (obj: IUsersModel) => void
     },
     postStore: {
         allPosts: IPostsModel[]
@@ -17,7 +18,8 @@ type StoreType = {
 }
 const defaultValue: StoreType = {
     userStore:{
-        allUsers: []
+        allUsers: [],
+        setFavoriteUser:()=>{}
     },
     postStore:{
         allPosts: []

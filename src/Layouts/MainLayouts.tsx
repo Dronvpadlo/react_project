@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Header from "../Components/Header";
 import {Outlet} from "react-router-dom";
 import Footer from "../Components/Footer";
-import {MyContext} from "../Context/Store";
+import {MyContext} from "../Context/ContextProvider";
 import {IUsersModel} from "../Models/IUsersModel";
 import {IPostsModel} from "../Models/IPostsModel";
 import {ICommentsModel} from "../Models/ICommentsModel";

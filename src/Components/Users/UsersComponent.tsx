@@ -1,6 +1,6 @@
 import React from 'react';
 import UserComponent from "./UserComponent";
-import {useContextProvider} from "../../Context/Store";
+import {useContextProvider} from "../../Context/ContextProvider";
 
 
 const UsersComponent = () => {

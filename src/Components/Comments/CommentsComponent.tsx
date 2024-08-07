@@ -1,6 +1,6 @@
 import React from 'react';
 import CommentComponent from "./CommentComponent";
-import {useContextProvider} from "../../Context/Store";
+import {useContextProvider} from "../../Context/ContextProvider";
 
 const CommentsComponent = () => {
     const {commentStore:{allComments}} = useContextProvider()

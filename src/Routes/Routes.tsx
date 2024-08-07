@@ -5,7 +5,7 @@ import PostsPage from "../Pages/PostsPage";
 import CommentsPage from "../Pages/CommentsPage";
 import MainLayouts from "../Layouts/MainLayouts";
 import HomePage from "../Pages/HomePage";
-import UserWithPostsComponent from "../Components/Users/UserWithPostsComponent";
+import UsersWithPostsComponent from "../Components/Users/UsersWithPostsComponent";
 
 let id = 2;
 const routes = [{
@@ -14,8 +14,8 @@ const routes = [{
         {path: 'users', element: <UsersPage/>},
         {path: 'posts', element: <PostsPage/>},
         {path: 'comments', element: <CommentsPage/>},
-        {path: 'users/' + id +'/posts' , element: <UserWithPostsComponent/>},
-        {path: 'posts/' + id +'/comments' , element: <UserWithPostsComponent/>}
+        {path: 'users/' + id +'/posts' , element: <UsersWithPostsComponent/>},
+        {path: 'posts/' + id +'/comments' , element: <UsersWithPostsComponent/>}
     ]
 }]
 export const router = createBrowserRouter(routes)

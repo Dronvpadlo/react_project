@@ -1,10 +1,10 @@
 import React from 'react';
-import UserWithPostsComponent from "../Components/Users/UserWithPostsComponent";
+import UsersWithPostsComponent from "../Components/Users/UsersWithPostsComponent";
 
 const UserWithPostsPage = () => {
     return (
         <div>
-            <UserWithPostsComponent/>
+            <UsersWithPostsComponent/>
         </div>
     );
 };

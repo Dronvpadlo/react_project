@@ -9,7 +9,9 @@ import UsersWithPostsComponent from "../Components/Users/UsersWithPostsComponent
 import PostsWithCommentsComponent from "../Components/Posts/PostsWithCommentsComponent";
 
 const routes = [{
-    path: '/', element: <MainLayouts/>, children:[
+    path: '/', element: <MainLayouts/>,
+
+    children:[
         {path: 'home', element: <HomePage/>},
         {path: 'users', element: <UsersPage/>},
         {path: 'posts', element: <PostsPage/>},

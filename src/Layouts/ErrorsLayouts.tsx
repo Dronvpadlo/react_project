@@ -1,14 +1,18 @@
 import React from 'react';
-import Header from "../Components/Header";
-import {Outlet} from "react-router-dom";
-import Footer from "../Components/Footer";
+import {NavLink} from "react-router-dom";
+
 
 const ErrorsLayouts = () => {
     return (
         <div>
-            <Header/>
-            <Outlet/>
-            <Footer/>
+            <div>
+                <h3>Sorry... Page not found!!!</h3>
+                <NavLink to={'/users'}>Users</NavLink><br/>
+                <NavLink to={'/usersPosts'}>Users with posts</NavLink><br/>
+                <NavLink to={'/posts'}>Posts</ NavLink><br/>
+                <NavLink to={'/postsComments'}>Posts with comments</NavLink><br/>
+                <NavLink to={'/comments'}>Comments</NavLink><br/>
+            </div>
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import CommentComponent from "./CommentComponent";
-import {useContextProvider} from "../../Context/Store";
+import {useStore} from "../../Context/store";
 
 const CommentsComponent = () => {
-    const {commentStore:{allComments}} = useContextProvider()
+    const {commentSlice:{allComments}} = useStore();
     return (
         <div>
             {

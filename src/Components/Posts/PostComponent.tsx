@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {IPostsModel} from "../../Models/IPostsModel";
+import {useStore} from "../../Context/store";
 
 interface IProps{
     post:IPostsModel

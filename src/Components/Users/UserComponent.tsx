@@ -1,11 +1,13 @@
 import React, {FC} from 'react';
 import {IUsersModel} from "../../Models/IUsersModel";
-import {useContextProvider} from "../../Context/Store";
+import {useStore} from "../../Context/store";
+
+
 interface IProps {
     user:IUsersModel
 }
 const UserComponent:FC<IProps> = ({user}) => {
-    const {userStore:{setFavoriteUser}} = useContextProvider()
+    const {userSlice:{setFavoriteUser}} = useStore();
     return (
         <div>
             ID: {user.id}. Name: {user.name}<br/>

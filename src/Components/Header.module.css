@@ -1,13 +1,19 @@
 .headerSection{
+    margin: 0;
     background-color: #ffdbc3;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 4vh;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    height: 20vh;
+    width: 100vw;
     color: white;
-    margin: 0;
 }
 .link{
     text-decoration: none;
     font-size: 18px;
+    color: #2a72a5;
+}
+.link:hover{
+    color: orange;
 }

@@ -5,7 +5,6 @@ const HomePage = () => {
     return (
         <div>
             Welcome<br/>
-            <NavLink to={'/home'}>Home</NavLink><br/>
             <NavLink to={'/users'}>Users</NavLink><br/>
             <NavLink to={'/usersPosts'}>Users with posts</NavLink><br/>
             <NavLink to={'/posts'}>Posts</ NavLink><br/>

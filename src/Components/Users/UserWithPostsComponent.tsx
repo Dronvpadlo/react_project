@@ -9,7 +9,7 @@ const UserWithPostsComponent:FC<IProps> = ({items}) => {
     return (
         <div>
             {
-                items.map((item, index) =><div>
+                items.map((item, index) =><div key={index}>
                     {item.name}
                     <div>
                         {

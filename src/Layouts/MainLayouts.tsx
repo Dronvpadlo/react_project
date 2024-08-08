@@ -22,7 +22,7 @@ const MainLayouts = () => {
 
             <hr/>
             {
-                favoriteUser && <div>{favoriteUser.username}</div>
+                favoriteUser && <div>Favourite User: {favoriteUser.name} {favoriteUser.username}</div>
             }
             <hr/>
         </div>
